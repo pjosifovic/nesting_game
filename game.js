@@ -21,9 +21,10 @@ function quest1() {
       }
     }
 }
+
 quest1();
 
-//question2
+// question2
 
 var two = document.getElementById('two');
 function quest2() {
@@ -52,7 +53,6 @@ quest2();
 // question3
 var three = document.getElementById('three');
 function quest3() {
-
     var count = 0;
     while (count != 1) {
       var question3 = prompt('Do you dring enough water?');
@@ -75,14 +75,15 @@ function quest3() {
 }
 quest3();
 
+// question5
 
-//question5
 var five = document.getElementById('five');
 var fiveCorrect = document.getElementById('fiveCorrect');
 function quest5() {
       var answer = 66;
       while (ques != answer) {
-      var ques = prompt('What number am I thinking of? To give you a hint, it\' between 0-100.');
+          var ques = prompt('What number am I thinking of? To give you a hint, it\' between 0-100.');
+          // console.log('inside WHILE loop');
           if (ques < 66) {
           five.textContent = ('Try higher!');
           document.getElementById("five").style.color = "red";
@@ -101,6 +102,21 @@ function quest5() {
 
 
 //question6
+=======
+          // console.log('inside IF loop');
+          }
+          else if (ques > 66) {
+          // console.log('inside ELSE IF loop');
+          five.textContent = ('Try lower!');
+          }
+      }
+      fiveCorrect.textContent = ('Good job Mindreader');
+}
+quest5()
+
+
+//question6
+
 var six = document.getElementById('six');
 var arr = ['cat','dog','mouse','rhino'];
 var correct = false;
