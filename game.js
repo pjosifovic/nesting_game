@@ -8,11 +8,13 @@ function quest1() {
       // console.log('First answer is ' + question1);
       one.textContent = ('Yay, I did have breakfast. I had some eggs and bakey!')
       count++;
+      document.getElementById("one").style.color = "green";
       }
       else if (question1.toLowerCase() === 'n' || question1.toUpperCase() === 'NO') {
       // console.log('First answer is ' + question1);
       one.textContent = ('No, I didn\'t have time to eat breakfast!')
       count++;
+      document.getElementById("one").style.color = "red";
       }
       else {
       alert('Please answer with yes or no');
@@ -32,11 +34,13 @@ function quest2() {
       // console.log('First answer is ' + question2);
       two.textContent = ('Yay, I love snow!');
       count++;
+      document.getElementById("two").style.color = "green";
       }
       else if (question2.toLowerCase() === 'n' || question2.toUpperCase() === 'NO') {
       // console.log('First answer is ' + question2);
       two.textContent = ('Good, coz I hate snow!');
       count++;
+      document.getElementById("two").style.color = "red";
       }
       else {
       alert('Please answer with yes or no');
@@ -56,11 +60,13 @@ function quest3() {
       // console.log('First answer is ' + question3);
       three.textContent = ('Yay, gotta stay hydrated!');
       count++;
+      document.getElementById("three").style.color = "green";
       }
       else if (question3.toLowerCase() === 'n' || question3.toUpperCase() === 'NO') {
       // console.log('First answer is ' + question3);
       three.textContent = ('No, I like coffee more!');
       count++;
+      document.getElementById("three").style.color = "red";
       }
       else {
       alert('Please answer with yes or no');
@@ -79,14 +85,17 @@ function quest5() {
       var ques = prompt('What number am I thinking of? To give you a hint, it\' between 0-100.');
           if (ques < 66) {
           five.textContent = ('Try higher!');
+          document.getElementById("five").style.color = "red";
           // console.log('inside if loop');
           }
           else if (ques > 66) {
           five.textContent = ('Try lower!');
+          document.getElementById("five").style.color = "red";
           // console.log('inside else if loop');
           }
       }
           fiveCorrect.textContent = ('Good job Mindreader');
+          document.getElementById("fiveCorrect").style.color = "green";
   }
   quest5();
 
@@ -111,5 +120,6 @@ function quest6() {
     }
   }
   six.textContent = ("Your got it right!");
+  document.getElementById('six').style.color = "green";
 }
 quest6();
