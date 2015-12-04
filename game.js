@@ -1,20 +1,20 @@
 //question1
-var one = document.getElementById('one');
+var oneEl = document.getElementById('one');
 function quest1() {
     var count = 0;
     while (count != 1) {
       var question1 = prompt('Did you eat breakfast this morning?');
       if (question1.toLowerCase() === 'y' || question1.toUpperCase() === 'YES'){
-      // console.log('First answer is ' + question1);
-      one.textContent = ('Yay, I did have breakfast. I had some eggs and bakey!')
+      console.log('First answer is ' + question1);
+      oneEl.textContent = ('Yay, I did have breakfast. I had some eggs and bakey!');
+      oneEl.className = 'right';
       count++;
-      document.getElementById("one").style.color = "green";
       }
       else if (question1.toLowerCase() === 'n' || question1.toUpperCase() === 'NO') {
-      // console.log('First answer is ' + question1);
-      one.textContent = ('No, I didn\'t have time to eat breakfast!')
+      console.log('First answer is ' + question1);
+      oneEl.textContent = ('No, I didn\'t have time to eat breakfast!');
+      oneEl.className = 'wrong';
       count++;
-      document.getElementById("one").style.color = "red";
       }
       else {
       alert('Please answer with yes or no');
@@ -35,13 +35,13 @@ function quest2() {
       // console.log('First answer is ' + question2);
       two.textContent = ('Yay, I love snow!');
       count++;
-      document.getElementById("two").style.color = "green";
+      two.className = 'right';
       }
       else if (question2.toLowerCase() === 'n' || question2.toUpperCase() === 'NO') {
       // console.log('First answer is ' + question2);
       two.textContent = ('Good, coz I hate snow!');
       count++;
-      document.getElementById("two").style.color = "red";
+      two.className = 'wrong';
       }
       else {
       alert('Please answer with yes or no');
@@ -60,13 +60,13 @@ function quest3() {
       // console.log('First answer is ' + question3);
       three.textContent = ('Yay, gotta stay hydrated!');
       count++;
-      document.getElementById("three").style.color = "green";
+      three.className = 'right';
       }
       else if (question3.toLowerCase() === 'n' || question3.toUpperCase() === 'NO') {
       // console.log('First answer is ' + question3);
       three.textContent = ('No, I like coffee more!');
       count++;
-      document.getElementById("three").style.color = "red";
+      three.className = 'wrong';
       }
       else {
       alert('Please answer with yes or no');
@@ -86,33 +86,21 @@ function quest5() {
           // console.log('inside WHILE loop');
           if (ques < 66) {
           five.textContent = ('Try higher!');
-          document.getElementById("five").style.color = "red";
+          five.className = 'right';
           // console.log('inside if loop');
           }
           else if (ques > 66) {
           five.textContent = ('Try lower!');
-          document.getElementById("five").style.color = "red";
+          five.className = "wrong";
           // console.log('inside else if loop');
           }
       }
           fiveCorrect.textContent = ('Good job Mindreader');
-          document.getElementById("fiveCorrect").style.color = "green";
+          fiveCorrect.className = 'right';
   }
   quest5();
 
 
-//question6
-=======
-          // console.log('inside IF loop');
-          }
-          else if (ques > 66) {
-          // console.log('inside ELSE IF loop');
-          five.textContent = ('Try lower!');
-          }
-      }
-      fiveCorrect.textContent = ('Good job Mindreader');
-}
-quest5()
 
 
 //question6
@@ -136,6 +124,6 @@ function quest6() {
     }
   }
   six.textContent = ("Your got it right!");
-  document.getElementById('six').style.color = "green";
-}
+  six.className = 'right';
+  }
 quest6();
